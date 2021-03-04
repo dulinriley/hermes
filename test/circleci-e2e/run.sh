@@ -39,7 +39,7 @@ echo "console.log('Using Hermes: ' + (global.HermesInternal != null));" >> packa
 adb wait-for-device
 
 # Build and install release app
-./gradlew :packages:rn-tester:android:app:installHermesRelease
+./gradlew --max-workers 8 :packages:rn-tester:android:app:installHermesRelease
 
 cd ..
 
